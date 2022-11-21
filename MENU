@@ -1,0 +1,37 @@
+
+let borda = 150;
+
+function setup (){
+ createCanvas(400, 400)
+
+}
+
+function draw(){
+ background(65,105,225)
+ noStroke()
+  
+ fill(0,255,127)
+ text("Conhecimentos Gerais", 200,100)
+ rect(100,150,200,50,10)
+ rect(100,250,200,50,10)
+ 
+ textSize(27)
+ textAlign(CENTER)
+ fill(47,79,79)
+ text("Jogar" ,200,180)
+ text("Instruções" ,200,280)
+
+ noFill()
+ stroke(0,0,0)
+ rect(100,borda,200,50,10)
+
+}
+
+function mousePressed(){
+  if (mouseX>=100 && mouseX<=300 && mouseY>=150 && mouseY<=200){
+    borda = 150
+  }else if(mouseX>=100 && mouseX <=300 && mouseY>=250 && mouseY<=300){
+    borda=250
+  }
+}
+
